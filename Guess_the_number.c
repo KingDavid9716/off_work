@@ -9,7 +9,7 @@ int main()
     
     printf("This is a guessing game where you guess what number the computer chose.\n");
    
-   printf("\nIf you guess more than 8 times, You lose and if you guess less than 8 times, You win.\n");
+   printf("\nIf you guess more than 9 times, You lose and if you guess less than 9 times, You win.\n");
     printf("\n");
     printf("                    RANGE IS BETWEEN 100 - 500\n");
     printf("                         GOOD LUCK!!!\n");
