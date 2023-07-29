@@ -49,7 +49,7 @@ int main()
   
   printf("The Answer is %d\n", answer);
   
-  if (guesses > 8 )
+  if (guesses > 9 )
   {
       printf("But you LOST the game...\n");
       printf("You guessed %d times...\n", guesses);
