@@ -1,0 +1,72 @@
+#include <stdio.h>
+
+int multip(int x, int y);
+int add(int x, int y);
+int subt(int x, int y);
+int divi(int x, int y);
+
+int main()
+{ int result, x, y;
+  char operator;
+  
+  printf("Enter values for computation: ");
+  if(scanf("%d %c %d", &x, &operator, &y) != 3)
+  {
+      printf("invalid...");
+      return 1;
+  }
+  
+
+if (operator == '+')
+{
+    result = add(x,y);
+  printf("addition = %d\n", result); 
+}
+else if (operator == '-')
+{
+    result = subt(x,y);
+  printf("subtraction = %d\n", result); 
+}
+else if (operator == '/')
+{
+    result = divi(x,y);
+  printf("division = %d\n", result); 
+}
+else if(operator == '*')
+{
+    result = multip(x,y);
+  printf("multiplication = %d\n", result);
+}
+   return 0;
+}
+
+int multip(int x, int y)
+{
+    int result;
+    result = x * y;
+    return result;
+}
+
+int add(int x, int y)
+{
+    int result;
+    result = x + y;
+    return result;
+}
+
+int subt(int x, int y)
+{
+    int result;
+    result = x - y;
+    return result;
+}
+
+int divi(int x, int y)
+{
+    int result;
+    if (y == 0)
+    return 1;
+    else
+    result = x / y;
+    return result;
+}
