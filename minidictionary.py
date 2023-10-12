@@ -1,3 +1,6 @@
+
+import pyttsx3
+running_machine = pyttsx3.init()
 print()
 # what the program does
 print(f"Hi, so this is a miniDictionary that tells you who I think You are")
@@ -17,6 +20,11 @@ individual = individual.upper()
 # check if name is in the dictionary and execute accordingly
 if individual in persons:
     meaning = persons[individual]
-    print(f"{meaning}")
+    running_machine.setProperty('rate', 127) 
+    print(f"{individual} is {meaning}")
+    running_machine.say(f"{individual} is {meaning}")
+    running_machine.runAndWait()
 else:
-    print(f"sorry folk. Dm King David to add yours")    
+    print(f"sorry folk. Dm King David to add yours")
+    running_machine.say(f"sorry folk. Dm King David to add yours")
+    running_machine.runAndWait()
